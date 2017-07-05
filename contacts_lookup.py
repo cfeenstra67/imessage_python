@@ -44,8 +44,3 @@ with sqlite3.connect(_db_path()) as conn:
 	def lookup_name(phone_number):
 		first, last, nickname = lookup_name_id(lookup_id(phone_number))
 		return {'first': first, 'last': last, 'nickname': nickname}
-
-	if __name__ == '__main__':
-		num = '+13177277169'
-		results = lookup_name(num)
-		print(results)
